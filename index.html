@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+  <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+  <title>Book Store</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #e9e08a;
+      color: #1a1a1d;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-check-input:checked {
+      background: #1a1a1d;
+      border: 1px solid #1a1a1d;
+    }
+
+    .form-check-input:focus {
+      border-color: #1a1a1d;
+      outline: 0;
+      box-shadow: 0 0 0 0.05rem #1a1a1d;
+    }
+
+    .error-div {
+      width: 50%;
+      margin: 0rem auto;
+      position: fixed;
+      left: 50%;
+      top: 0%;
+      z-index: 10;
+      transform: translate(-50% , 0%);
+      display: none;
+      text-align: center;
+      padding: 0.3rem;
+      color: white;
+    }
+    
+    .delete {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-div"> </div>
+  <div class="container">
+    <h1 class="text-center my-5 text-uppercase fs-1">Book Store</h1>
+    <form action="#" class="w-50 mx-auto form">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control text-dark book-name" id="floatingInput" autocomplete="off" placeholder="Book Name"
+          style="box-shadow: none" />
+        <label for="floatingInput">Book Name</label>
+      </div>
+      <div class="form-floating">
+        <input type="number" class="form-control text-dark isbn-code" id="floatingPassword" style="box-shadow: none" autocomplete="off" placeholder="ISBN Code"/>
+        <label for="floatingPassword">ISBN Code</label>
+      </div>
+      <div class="button text-center mt-5">
+        <button type="submit" class="btn btn-danger pb-2 submit-btn">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="container w-75 my-4">
+    <h3 class="text-center my-2 text-uppercase">Issued Books</h3>
+    <div class="no-book-issued text-danger">Nothing Here.. <p class="text-dark">For Issue a New Book - Fill the upper Fields and click on Issue a book and then click submit.</p></div>
+    <div class="row w-100 text-center">
+      <table class="table w-75 mx-auto" style="border-color: #1a1a1d;">
+        <thead>
+          <tr>
+            <th scope="col">Book Name</th>
+            <th scope="col">Isbn code</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="appES6.js"></script>
+</body>
+</html>
